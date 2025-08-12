@@ -1,0 +1,28 @@
+{
+	"schemaVersion": 1,
+	"id": "multitask",
+	"version": "${version}",
+	"name": "Multitask",
+	"description": "A simple Fabric mod which unblocks certain interactions in Minecraft.",
+	"authors": [
+		"WhatYouThing"
+	],
+	"contact": {
+		"sources": "https://github.com/WhatYouThing/Multitask"
+	},
+	"license": "GPL-3.0",
+	"environment": "client",
+	"entrypoints": {
+		"main": [
+			"multitask.Main"
+		]
+	},
+	"mixins": [
+      "multitask.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.0",
+		"minecraft": "1.21.5",
+		"java": ">=21"
+	}
+}
