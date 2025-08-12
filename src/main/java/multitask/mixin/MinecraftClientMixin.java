@@ -33,7 +33,7 @@ public abstract class MinecraftClientMixin {
 
     @ModifyExpressionValue(method = "handleInputEvents", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/network/ClientPlayerEntity;isUsingItem()Z", ordinal = 0))
     private boolean handleInputIsUsing(boolean original) {
-        if (!instance.options.useKey.isPressed()) {
+        if (original && !instance.options.useKey.isPressed()) {
             instance.interactionManager.stopUsingItem(instance.player);
         }
         return false;
